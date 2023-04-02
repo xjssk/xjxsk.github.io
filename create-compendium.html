@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Create a Research Compendium</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Reproducible Research with rrtools</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-gear"></span>
+     
+    Handouts
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Workshop Sections</li>
+    <li>
+      <a href="intro.html">Welcome &amp; Background</a>
+    </li>
+    <li>
+      <a href="create-compendium.html">Create a compendium</a>
+    </li>
+    <li>
+      <a href="package.html">Manage functionality as a package</a>
+    </li>
+    <li>
+      <a href="paper.html">Create a reproducible paper</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://bit.ly/rrtools_wks">Get Workshop Materials</a>
+</li>
+<li>
+  <a href="https://github.com/annakrystalli/rrcompendium-complete">Final compendium</a>
+</li>
+<li>
+  <a href="https://github.com/annakrystalli/rrtools-repro-research">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Create a Research Compendium</h1>
+
+</div>
+
+
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
+<li>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2019-05-03
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>rrtools-repro-research/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.3.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="checks" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20181015code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20181015)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20181015code" class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20181015)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomannakrystallirrtoolsreproresearchtreef7b42e553e31d8c4f0461a15d441f806b69820e8targetblankf7b42e5a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/annakrystalli/rrtools-repro-research/tree/f7b42e553e31d8c4f0461a15d441f806b69820e8" target="_blank">f7b42e5</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomannakrystallirrtoolsreproresearchtreef7b42e553e31d8c4f0461a15d441f806b69820e8targetblankf7b42e5a" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
+<pre><code>
+Ignored files:
+    Ignored:    .DS_Store
+    Ignored:    .Rhistory
+    Ignored:    .Rproj.user/
+    Ignored:    analysis/.DS_Store
+    Ignored:    analysis/data/
+    Ignored:    analysis/package.Rmd
+    Ignored:    assets/
+    Ignored:    docs/.DS_Store
+    Ignored:    docs/assets/Boettiger-2018-Ecology_Letters.pdf
+    Ignored:    docs/assets/Packaging-Data-Analytical Work-Reproducibly-Using-R-and-Friends.pdf
+    Ignored:    docs/css/
+    Ignored:    libs/
+
+</code></pre>
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/f7b42e553e31d8c4f0461a15d441f806b69820e8/docs/create-compendium.html" target="_blank">f7b42e5</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2019-05-03
+</td>
+<td>
+address merge conflict
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/annakrystalli/rrtools-repro-research/blob/c0b47a4cadf4086dd39a29d5d70b5183d792f5d1/analysis/create-compendium.Rmd" target="_blank">c0b47a4</a>
+</td>
+<td>
+Ania Tassinari
+</td>
+<td>
+2019-05-03
+</td>
+<td>
+Add example <code>name</code> parameter for use_mit_license()
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/6fa5089df973addfd0bc0b838eb0c07334fba8c8/docs/create-compendium.html" target="_blank">6fa5089</a>
+</td>
+<td>
+Anna Krystalli
+</td>
+<td>
+2019-03-15
+</td>
+<td>
+update navbar
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/a59b949c9a73273d78e2d93945fa6c42a4f77a24/docs/create-compendium.html" target="_blank">a59b949</a>
+</td>
+<td>
+Anna Krystalli
+</td>
+<td>
+2019-03-15
+</td>
+<td>
+update docs
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/annakrystalli/rrtools-repro-research/blob/ad92cb08109d48f5edc61e9a0256085b3a24efef/analysis/create-compendium.Rmd" target="_blank">ad92cb0</a>
+</td>
+<td>
+Anna Krystalli
+</td>
+<td>
+2019-03-15
+</td>
+<td>
+update use_github instructions
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/f78d1b54c406d262df2918b46577af596af1c930/docs/create-compendium.html" target="_blank">f78d1b5</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-11-27
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/annakrystalli/rrtools-repro-research/blob/ebde789008c50fec03dbb7b64443798b934c922e/analysis/create-compendium.Rmd" target="_blank">ebde789</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-11-27
+</td>
+<td>
+actually save the changes made in previous commit
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/c9513e99bf0906ff726bddddef863c7334882288/docs/create-compendium.html" target="_blank">c9513e9</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-11-27
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/annakrystalli/rrtools-repro-research/blob/241086e5db58771ee6360332c81e7efb8fa7d38d/analysis/create-compendium.Rmd" target="_blank">241086e</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-11-27
+</td>
+<td>
+add cboettig, deactivate webshot, add
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/95a9aa052a95c6afafd5c0aaba87df191bd6c0ed/docs/create-compendium.html" target="_blank">95a9aa0</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-11-10
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/97818bf318067746d2bd9ed9fc7a34580c95f581/docs/create-compendium.html" target="_blank">97818bf</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-11-10
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/2c1e9572829c307c3d6921c6bd98d94ecb112597/docs/create-compendium.html" target="_blank">2c1e957</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-10-31
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/c26c9360887245207869d7cd79130f334488a96a/docs/create-compendium.html" target="_blank">c26c936</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-10-31
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/52adf4f0c35dc3fc2b7d57ade327271f3565dd7b/docs/create-compendium.html" target="_blank">52adf4f</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-10-30
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/annakrystalli/rrtools-repro-research/blob/f7c3c51e84da27395cc096b2e4d0a115350abce4/analysis/create-compendium.Rmd" target="_blank">f7c3c51</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-10-30
+</td>
+<td>
+commit final draft
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/annakrystalli/rrtools-repro-research/921a7f864708008758ca207fa2761de380f22642/docs/create-compendium.html" target="_blank">921a7f8</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-10-30
+</td>
+<td>
+commit docs
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/annakrystalli/rrtools-repro-research/blob/f1468acbb039fedf24ab2799ff1ca290f4df46fa/analysis/create-compendium.Rmd" target="_blank">f1468ac</a>
+</td>
+<td>
+annakrystalli
+</td>
+<td>
+2018-10-30
+</td>
+<td>
+commit Rmd
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div id="workshop-setup" class="section level2">
+<h2>Workshop setup</h2>
+<p><br></p>
+<div id="launch-rstudio" class="section level3">
+<h3>Launch Rstudio</h3>
+<p>Let’s begin by <strong>launching Rstudio</strong></p>
+<p><br></p>
+</div>
+<div id="install-packages" class="section level3">
+<h3>Install packages</h3>
+<p>Next, let’s <strong>install the packages we’ll need, starting with <code>rrtools</code></strong> (if you haven’t got devtools installed, you’ll need to before you can install <code>rrtools</code> from GitHub).</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install.packages(&quot;devtools&quot;)</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;benmarwick/rrtools&quot;</span>)</a></code></pre></div>
+<p>Installing <code>rrtools</code> <strong>imports many of the packages we’ll need today</strong> (eg, have a look at the imports section of the <a href="https://github.com/benmarwick/rrtools/blob/master/DESCRIPTION"><code>DESCRIPTION</code></a> file).</p>
+<pre><code>Imports: devtools, git2r, whisker, rstudioapi, rmarkdown, knitr,
+    bookdown, curl, RCurl, jsonlite, methods, httr, usethis, clisymbols,
+    crayon, glue, readr (&gt;= 1.1.1)</code></pre>
+<p>Now, <strong>install some additional packages</strong> we’ll need for the workshop.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="kw">c</span>(</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">    <span class="co"># source paper analysis</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;ggthemes&quot;</span>, <span class="st">&quot;here&quot;</span>,</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">    <span class="co"># bibliographic / publishing</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">    <span class="st">&quot;citr&quot;</span>, <span class="st">&quot;rticles&quot;</span>,</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">    <span class="co"># documentation</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">    <span class="st">&quot;roxygen2&quot;</span>,</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">    <span class="co"># graphics</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">    <span class="st">&quot;Cairo&quot;</span>))</a></code></pre></div>
+<p><br></p>
+</div>
+<div id="get-workshop-materials" class="section level3">
+<h3>Get workshop materials</h3>
+<p>Today we’ll be working with <strong>a subset of materials from the published compendium</strong> of code, data, and author’s manuscript:</p>
+<div id="carl-boettiger.-2018-april-17.-cboettignoise-phenomena-supplement-to-from-noise-to-knowledge-how-randomness-generates-novel-phenomena-and-reveals-information-version-revision-2.-zenodo.-httpdoi.org10.5281zenodo.1219780" class="section level5">
+<h5>Carl Boettiger. (2018, April 17). <em>cboettig/noise-phenomena: Supplement to: “From noise to knowledge: how randomness generates novel phenomena and reveals information”</em> (Version revision-2). <em>Zenodo</em>. <a href="http://doi.org/10.5281/zenodo.1219780" class="uri">http://doi.org/10.5281/zenodo.1219780</a></h5>
+<p>accompanying the publication:</p>
+</div>
+<div id="carl-boettiger-.-from-noise-to-knowledge-how-randomness-generates-novel-phenomena-and-reveals-information.-published-in-ecology-letters-22-may-2018-httpsdoi.org10.1111ele.13085" class="section level5">
+<h5>Carl Boettiger <a href="https://orcid.org/0000-0002-1642-628X"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" /></a>. <em>From noise to knowledge: how randomness generates novel phenomena and reveals information</em>. Published in <em>Ecology Letters</em>, 22 May 2018 <a href="https://doi.org/10.1111/ele.13085" class="uri">https://doi.org/10.1111/ele.13085</a></h5>
+<p><img src="assets/Boettiger-2018.png" heigth="250px" width="400px"></p>
+<p>You can <strong>download the materials using <code>usethis::use_course()</code></strong> and supplying a path to a destination folder to argument <code>destdir</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">usethis<span class="op">::</span><span class="kw">use_course</span>(<span class="dt">url =</span> <span class="st">&quot;bit.ly/rrtools_wks&quot;</span>, <span class="dt">destdir =</span> <span class="st">&quot;~/Desktop&quot;</span>)</a></code></pre></div>
+<p>This will <strong>download</strong> everything we need from a GitHub repository as a <code>.zip</code> file, <strong>unzip</strong> it and launch it in a <strong>new Rstudio session</strong> for us to explore.</p>
+<p><br></p>
+</div>
+<div id="inspect-materials" class="section level4">
+<h4>Inspect materials</h4>
+<pre><code>├── README.md &lt;- .......................repo README
+├── analysis.R &lt;- ......................analysis underlying paper
+├── gillespie.csv &lt;- ...................data
+├── paper.pdf &lt;- .......................LaTex pdf of the paper
+├── paper.txt &lt;- .......................text body of the paper
+├── refs.bib &lt;- ........................bibtex bibliographic file
+└── rrtools-wkshp-materials.Rproj &lt;- ...rstudio project file</code></pre>
+<p><br></p>
+<p>In this workshop we’ll attempt <strong>a partial reproduction of the original paper</strong> using the materials we’ve just downloaded.</p>
+<p>We’ll <strong>use this as an opportunity to create a new research compendium using <code>rrtools</code> and friends!</strong> 🎊</p>
+<p><br></p>
+<hr />
+</div>
+</div>
+</div>
+<div id="create-compendium" class="section level2">
+<h2>Create compendium</h2>
+<p>Now that we’ve got all the materials we need, let’s start by *<strong>creating a blank research compendium</strong> for us to work in.</p>
+<p><br></p>
+<div id="load-library" class="section level3">
+<h3>load library</h3>
+<p>First we need to load <code>rrtools</code></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(rrtools) </a></code></pre></div>
+<p>This performs a quick check to <strong>confirm you have Git installed and configured</strong></p>
+<p>If you do, you should see the following output in the console.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">✔ Git is installed on this computer, your username is annakrystalli</a></code></pre></div>
+<div id="configure-git" class="section level4">
+<h4>configure <code>git</code></h4>
+<p>If your git configuration hasn’t been set yet, you can use <code>usethis::use_git_config()</code></p>
+<p><strong>Set git configuration:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">usethis<span class="op">::</span><span class="kw">use_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;Jane&quot;</span>, <span class="dt">user.email =</span> <span class="st">&quot;jane@example.org&quot;</span>)</a></code></pre></div>
+<p><strong>Check git configuration:</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">usethis<span class="op">::</span><span class="kw">use_git_config</span>()</a></code></pre></div>
+<pre><code>$user.name
+[1] &quot;Jane&quot;
+
+$user.email
+[1] &quot;jane@example.org&quot;</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="create-compendium-1" class="section level3">
+<h3>create compendium</h3>
+<p>Now we’re ready to <strong>create our compendium</strong>. We use function <strong><code>rrtools::use_compendium</code></strong> and supply it with a path at which our compendium will be created. The final part of our path becomes the compendium name. Because the function effectively creates a package, only a <strong>single string of lowercase alpha characters is accepted as a name</strong>. so let’s go for <code>rrcompendium</code> as the final part of our path.</p>
+<p>To <strong>create <code>rrcompendium</code> in a directory called <code>Documents/workflows/</code> I use:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">rrtools<span class="op">::</span><span class="kw">use_compendium</span>(<span class="st">&quot;~/Documents/workflows/rrcompendium&quot;</span>)</a></code></pre></div>
+<p>Go ahead and <strong>create a compendium at a location of your choice</strong>. Stick with compendium name <code>rrcompendium</code> for ease of following the materials. If the call was successfull you should see the following console output:</p>
+<pre><code>✔ Setting active project to &#39;/Users/Anna/Documents/workflows/rrcompendium&#39;
+✔ Creating &#39;R/&#39;
+✔ Creating &#39;man/&#39;
+✔ Writing &#39;DESCRIPTION&#39;
+✔ Writing &#39;NAMESPACE&#39;
+✔ Writing &#39;rrcompendium.Rproj&#39;
+✔ Adding &#39;.Rproj.user&#39; to &#39;.gitignore&#39;
+✔ Adding &#39;^rrcompendium\\.Rproj$&#39;, &#39;^\\.Rproj\\.user$&#39; to &#39;.Rbuildignore&#39;
+✔ Opening new project &#39;rrcompendium&#39; in RStudio
+✔ The package rrcompendium has been created
+✔ Opening the new compendium in a new RStudio session...
+
+Next, you need to:  ↓ ↓ ↓ 
+● Edit the DESCRIPTION file
+● Use other &#39;rrtools&#39; functions to add components to the compendium</code></pre>
+<p>and a new Rstudio session launched for the compendium:</p>
+<p><img src="assets/create-compendium.png" heigth="500px"></p>
+<p><br></p>
+</div>
+<div id="initiate-git" class="section level3">
+<h3>Initiate <code>git</code></h3>
+<p>We can initialise our compendium with <code>.git</code> using:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">usethis<span class="op">::</span><span class="kw">use_git</span>()</a></code></pre></div>
+<p><strong>N.B. Beware, you may have ended up with two Rstudio sessions of <code>rrcompendium</code>.</strong> Make sure to only have one session of a single project at one time to avoid problems.</p>
+<p><br></p>
+</div>
+<div id="inspect-templates" class="section level3">
+<h3>Inspect templates</h3>
+<pre><code>.
+├── DESCRIPTION &lt;- .............................package metadata
+|                                               dependency management
+├── NAMESPACE &lt;- ...............................AUTO-GENERATED on build
+├── R &lt;- .......................................folder for functions
+├── man &lt;- .....................................AUTO-GENERATED on build
+└── rrcompendium.Rproj &lt;- ......................rstudio project file</code></pre>
+<p><code>rrtools::use_compendium()</code> creates the <strong>bare backbone of infrastructure required for a research compendium</strong>. At this point it provides facilities to store general metadata about our compendium (eg bibliographic details to create a citation) and manage dependencies in the <code>DESCRIPTION</code> file and store and document functions in the <code>R/</code> folder. Together these allow us to <strong>manage, install and share functionality associated with our project</strong>.</p>
+<p><br></p>
+</div>
+<div id="update-description-file" class="section level3">
+<h3>update description file</h3>
+<p>Let’s <strong>update some basic details in the <code>DESCRIPTION</code> file</strong>:</p>
+<pre><code>Package: rrcompendium
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = &quot;First&quot;,
+           family = &quot;Last&quot;,
+           role = c(&quot;aut&quot;, &quot;cre&quot;),
+           email = &quot;first.last@example.com&quot;)
+Description: What the package does (one paragraph)
+License: What license it uses
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+</code></pre>
+<p><br></p>
+</div>
+<div id="title" class="section level3">
+<h3>Title</h3>
+<p>Let’s start with <strong>giving our compendium a descriptive title</strong>:</p>
+<pre><code>Title: Partial Reproduction of Boettiger Ecology Letters 2018;21:1255–1267 
+    with rrtools</code></pre>
+<p><br></p>
+</div>
+<div id="version" class="section level3">
+<h3>Version</h3>
+<p>We don’t need to change the version now but using <a href="https://semver.org/">semantic versioning</a> for our compendium can be a really useful way to track versions. In general, <strong>versions below <code>0.0.1</code> are in development</strong>, hence the <code>DESCRIPTION</code> file defaults to <code>0.0.0.9000</code>.</p>
+<p><br></p>
+</div>
+<div id="authors" class="section level3">
+<h3>Authors</h3>
+<p>Next let’s <strong>specify the author of the compendium</strong>. Edit with <strong>your own details</strong>.</p>
+<pre><code>Authors@R: 
+    person(given = &quot;Anna&quot;,
+           family = &quot;Krystalli&quot;,
+           role = c(&quot;aut&quot;, &quot;cre&quot;),
+           email = &quot;annakrystalli@googlemail.com&quot;)</code></pre>
+<p>For more details on specifying authors, check documentation for <code>?person</code></p>
+<p><br></p>
+</div>
+<div id="description" class="section level3">
+<h3>Description</h3>
+<p>Let’s <strong>add a bit more detail about the contents of the compendium</strong> in the Description.</p>
+<pre><code>Description: This repository contains the research compendium of the 
+    partial reproduction of Boettiger Ecology Letters 2018;21:1255–1267. 
+    The compendium contains all data, code, and text associated with this       sub-section of the analysis</code></pre>
+<p><br></p>
+</div>
+<div id="license" class="section level3">
+<h3>License</h3>
+<p>Finally, let’s <strong>add a license for the material we create</strong>. We’ll use an <a href="https://opensource.org/licenses/MIT"><strong>MIT license</strong></a>. Note however that <strong>his only covers the code</strong>. We can do this with:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"> usethis<span class="op">::</span><span class="kw">use_mit_license</span>(<span class="dt">name =</span> <span class="st">&quot;My Name&quot;</span>)</a></code></pre></div>
+<pre><code>✔ Setting License field in DESCRIPTION to &#39;MIT + file LICENSE&#39;
+✔ Writing &#39;LICENSE.md&#39;
+✔ Adding &#39;^LICENSE\\.md$&#39; to &#39;.Rbuildignore&#39;</code></pre>
+<p>This creates files <code>LICENSE</code> and <code>LICENSE.md</code> and updates the <code>DESCRIPTION</code> file with details of the license.</p>
+<pre><code>License: MIT + file LICENSE</code></pre>
+<p><br></p>
+</div>
+<div id="recap" class="section level3">
+<h3>Recap</h3>
+<p>We’ve finished updating our <code>DESCRIPTION</code> file! 🎉</p>
+<p>It should look a bit like this:</p>
+<pre><code>Package: rrcompendium
+Title: Partial Reproduction of Boettiger Ecology Letters 2018;21:1255–1267 
+    with rrtools
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = &quot;Anna&quot;,
+           family = &quot;Krystalli&quot;,
+           role = c(&quot;aut&quot;, &quot;cre&quot;),
+           email = &quot;annakrystalli@googlemail.com&quot;)
+Description: This repository contains the research compendium of the partial 
+    reproduction of Boettiger Ecology Letters 2018;21:1255–1267. The compendium 
+    contains all data, code, and text associated with this sub-section of the 
+    analysis.
+License: MIT + file LICENSE
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+</code></pre>
+<p>and your project folder should contain:</p>
+<pre><code>.
+├── DESCRIPTION
+├── LICENSE
+├── LICENSE.md
+├── NAMESPACE
+├── R
+├── man
+└── rrcompendium.Rproj</code></pre>
+<p>Let’s commit our work and move on to preparing our compendium for sharing on GitHub.</p>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="sharing-a-compendium-on-github" class="section level2">
+<h2>Sharing a compendium on GitHub</h2>
+<p><br></p>
+<div id="set-up-github-pat" class="section level3">
+<h3>Set up GITHUB PAT</h3>
+<p>You’ll <strong>need a Personal Authorisation Token (PAT) from GitHub</strong> to be able to <strong>interact with GitHub through R</strong>.</p>
+<p>Use:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">usethis<span class="op">::</span><span class="kw">browse_github_pat</span>()</a></code></pre></div>
+<p>to open up the <strong>GitHub panel to generate your PAT</strong>.</p>
+<p><img src="assets/browse_github.png" height="300px"></p>
+<p><strong>Copy the generated PAT</strong> to <strong>paste into your <code>.Renviron</code></strong> file as system variable <strong><code>GITHUB_PAT</code></strong>.</p>
+<p>You can <strong>open your <code>.Renviron</code> file for editing</strong> with:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">usethis<span class="op">::</span><span class="kw">edit_r_environ</span>()</a></code></pre></div>
+<p><strong>Paste your copied PAT into your <code>.Renviron</code></strong> file as system variable <code>GITHUB_PAT</code>, save and close. Now everytime R is reloaded, your PAT will be stored in system variable <code>GITHUB_PAT</code>.</p>
+<p><img src="assets/GITHUB_PAT.png" height="300px"></p>
+<p><br></p>
+</div>
+<div id="create-github-repository" class="section level3">
+<h3>Create GitHub repository</h3>
+<p>Next, we’ll <strong>create a GitHub repository to share our compendium</strong>. We’ll make use of our <code>GITHUB_PAT</code> and go for <code>https</code> authentication. We can do this with function:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">usethis<span class="op">::</span><span class="kw">use_github</span>(<span class="dt">protocol =</span> <span class="st">&quot;https&quot;</span>)</a></code></pre></div>
+<pre><code>✔ Setting active project to &#39;/Users/Anna/Documents/workflows/rrcompendium&#39;
+● Check title and description
+  Name:        rrcompendium
+  Description: Partial Reproduction of Boettiger Ecology Letters 2018;21:1255–1267 with rrtools
+  </code></pre>
+<p>The function will prompt you to confirm the name and description for your GitHub repo which it parses from our <code>DESCRIPTION</code> file. If everything looks good select the affirmative option.</p>
+<pre><code>Are title and description ok?
+1: Not now
+2: Definitely
+3: Nope
+</code></pre>
+<p>If creation of the repo was successfull you should see the following console output:</p>
+<pre><code>✔ Creating GitHub repository
+✔ Adding GitHub remote
+✔ Adding GitHub links to DESCRIPTION
+✔ Setting URL field in DESCRIPTION to &#39;https://github.com/annakrystalli/rrcompendium&#39;
+✔ Setting BugReports field in DESCRIPTION to &#39;https://github.com/annakrystalli/rrcompendium/issues&#39;
+✔ Pushing to GitHub and setting remote tracking branch
+✔ Opening URL https://github.com/annakrystalli/rrcompendium</code></pre>
+<p><br></p>
+</div>
+<div id="create-readme" class="section level3">
+<h3>Create README</h3>
+<p>Every GitHub repository needs a <code>README</code> landing page.</p>
+<p>We can <strong>create an <code>rrtools</code> <code>README</code> template</strong> using:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1">rrtools<span class="op">::</span><span class="kw">use_readme_rmd</span>()</a></code></pre></div>
+<pre><code>
+✔ Creating &#39;README.Rmd&#39; from template.
+✔ Adding &#39;README.Rmd&#39; to `.Rbuildignore`.
+● Modify &#39;README.Rmd&#39;
+✔ Rendering README.Rmd to README.md for GitHub.
+✔ Adding code of conduct.
+✔ Creating &#39;CONDUCT.md&#39; from template.
+✔ Adding &#39;CONDUCT.md&#39; to `.Rbuildignore`.
+✔ Adding instructions to contributors.
+✔ Creating &#39;CONTRIBUTING.md&#39; from template.
+✔ Adding &#39;CONTRIBUTING.md&#39; to `.Rbuildignore`.
+</code></pre>
+<p>This <strong>generates <a href="README.Rmd">README.Rmd</a> and renders it to <a href="README.md">README.md</a></strong>, ready to display on GitHub. It contains:</p>
+<ul>
+<li>a <strong>template citation</strong> to show others how to cite your project.</li>
+<li><strong>license information for the text, figures, code and data</strong> in your compendium</li>
+</ul>
+<pre><code>---
+output: github_document
+---
+
+&lt;!-- README.md is generated from README.Rmd. Please edit that file --&gt;
+
+``{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = &quot;#&gt;&quot;,
+  fig.path = &quot;README-&quot;
+)
+``
+
+# rrcompendium
+
+This repository contains the data and code for our paper:
+
+&gt; Authors, (YYYY). _Title of paper_. Name of journal/book &lt;https://doi.org/xxx/xxx&gt;
+
+Our pre-print is online here:
+
+&gt; Authors, (YYYY). _Title of paper_. Name of journal/book, Accessed 03 May 2019. Online at &lt;https://doi.org/xxx/xxx&gt;
+
+
+### How to cite
+
+Please cite this compendium as:
+
+&gt; Authors, (2019). _Compendium of R code and data for &#39;Title of paper&#39;_. Accessed 03 May 2019. Online at &lt;https://doi.org/xxx/xxx&gt;
+
+### How to download or install
+
+You can download the compendium as a zip from from this URL: &lt;/archive/master.zip&gt;
+
+Or you can install this compendium as an R package, rrcompendium, from GitHub with:
+### Licenses
+
+**Text and figures :**  [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
+
+**Code :** See the [DESCRIPTION](DESCRIPTION) file
+
+**Data :** [CC-0](http://creativecommons.org/publicdomain/zero/1.0/) attribution requested in reuse
+
+### Contributions
+
+We welcome contributions from everyone. Before you get started, please see our [contributor guidelines](CONTRIBUTING.md). Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+</code></pre>
+<p><br></p>
+<p>The call also adds two other markdown files:</p>
+<ul>
+<li><code>CONDUCT.md</code>: a <strong>code of conduct for users</strong></li>
+<li><code>CONTRIBUTING.md</code>:: basic <strong>instructions for people who want to contribute</strong> to our compendium</li>
+</ul>
+<p><br></p>
+</div>
+<div id="update-readme" class="section level3">
+<h3>update <code>README</code></h3>
+<p>There’s <strong>five main edits</strong> we need to make to the template:</p>
+<div id="edit-compendium-doi-details" class="section level4">
+<h4>edit compendium DOI details</h4>
+<p>Although we don’t have a link to the DOI, we can complete the rest of the details and leave it as a place holder.</p>
+<pre><code>This repository contains the data and code for our reproduction paper:
+
+&gt; Krystalli, A, (2018). _Partial Reproduction of Boettiger Ecology Letters 2018;21:1255–1267 with rrtools_.  &lt;https://doi.org/{DOI-to-paper}&gt;</code></pre>
+</div>
+<div id="edit-paper.pdf-doi" class="section level4">
+<h4>edit paper.pdf DOI</h4>
+<pre><code>Our reproduction pre-print is online here:
+
+&gt; Krystalli, A, (2018). _Partial Reproduction of Boettiger Ecology Letters 2018;21:1255–1267 with rrtools_, Accessed 03 May 2019. Online at &lt;https://doi.org/{DOI-to-compendium}&gt;
+</code></pre>
+</div>
+<div id="edit-compendium-citation" class="section level4">
+<h4>edit compendium citation</h4>
+<pre><code>Please cite this compendium as:
+
+&gt; Krystalli, A, (2019). _Compendium of R code and data for &#39;Partial Reproduction of Boettiger Ecology Letters 2018;21:1255–1267 with rrtools&#39;_. Accessed 03 May 2019. Online at &lt;https://doi.org/{DOI-to-compendium}&gt;</code></pre>
+</div>
+<div id="update-zip-url" class="section level4">
+<h4>update zip url</h4>
+<p>This is a link to download a zipped file of the repository. To update the template, just paste the url of your compendium repository like so:</p>
+<pre><code>### How to download or install
+
+You can download the compendium as a zip from from this URL: &lt;https://github.com/annakrystalli/rrcompendium/archive/master.zip&gt;</code></pre>
+</div>
+<div id="adjust-data-license" class="section level4">
+<h4>adjust data LICENSE</h4>
+<p>Let’s <strong>adjust the data LICENSE to match the source compendium license</strong>, which is CC-BY 4.0. Let’s also add Carl Boettiger as copyright holder of the data.</p>
+<pre><code>**Text and figures :**  [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/), Copyright (c) 2018 Carl Boettiger.
+
+**Code :** See the [DESCRIPTION](DESCRIPTION) file
+
+**Data :** [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/), Copyright (c) 2018 Carl Boettiger.</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="render-readme.md-commit-and-push-to-github" class="section level3">
+<h3>render README.md, commit and push to GitHub</h3>
+<div id="weve-now-completed-our-rrtools-readme.rmd" class="section level4">
+<h4>We’ve now completed our <code>rrtools</code> <code>README.Rmd</code>! 🎉</h4>
+<ul>
+<li><p>Render it to update the <code>README.md</code> file which is displayed on GitHub</p></li>
+<li><p>Commit and push to GitHub.</p></li>
+</ul>
+<p>You’re Github repository README should look like this on the site:</p>
+<hr />
+<p><img src="assets/README-webshot.png" /></p>
+<hr />
+<p>and your project folder should contain:</p>
+<pre><code>.
+├── CONDUCT.md
+├── CONTRIBUTING.md
+├── DESCRIPTION
+├── LICENSE
+├── LICENSE.md
+├── NAMESPACE
+├── R
+├── README.Rmd
+├── README.md
+├── man
+└── rrcompendium.Rproj</code></pre>
+<p><br></p>
+<hr />
+</div>
+</div>
+</div>
+<div id="setting-up-the-analysis-folder" class="section level2">
+<h2>Setting up the analysis folder</h2>
+<p><br></p>
+<div id="create-analysis" class="section level3">
+<h3>Create <code>analysis</code></h3>
+<p>We now need an <strong>analysis folder to contain our analysis and paper</strong>. We can do this using function <code>rrtools::use_analysis()</code></p>
+<p>The function has three <code>location =</code> options:</p>
+<ul>
+<li><p><code>top_level</code> to create a top-level <code>analysis/</code> directory</p></li>
+<li><p><code>inst</code> to create an <code>inst/</code> directory (so that all the sub-directories are available after the package is installed)</p></li>
+<li><p><code>vignettes</code> to create a <code>vignettes/</code> directory (and automatically update the <code>DESCRIPTION</code>).</p></li>
+</ul>
+<p>The default is a top-level <code>analysis/</code>.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1">rrtools<span class="op">::</span><span class="kw">use_analysis</span>()</a></code></pre></div>
+<pre><code>✔ Adding bookdown to Imports
+✔ Creating &#39;analysis&#39; directory and contents
+✔ Creating &#39;analysis&#39;
+✔ Creating &#39;analysis/paper&#39;
+✔ Creating &#39;analysis/figures&#39;
+✔ Creating &#39;analysis/templates&#39;
+✔ Creating &#39;analysis/data&#39;
+✔ Creating &#39;analysis/data/raw_data&#39;
+✔ Creating &#39;analysis/data/derived_data&#39;
+✔ Creating &#39;references.bib&#39; from template.
+✔ Creating &#39;paper.Rmd&#39; from template.
+
+Next, you need to:  ↓ ↓ ↓ ↓ 
+● Write your article/report/thesis, start at the paper.Rmd file
+● Add the citation style library file (csl) to replace the default provided here, see https://github.com/citation-style-language/
+● Add bibliographic details of cited items to the &#39;references.bib&#39; file
+● For adding captions &amp; cross-referencing in an Rmd, see https://bookdown.org/yihui/bookdown/
+● For adding citations &amp; reference lists in an Rmd, see http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+
+Note that:
+⚠ Your data files are tracked by Git and will be pushed to GitHub</code></pre>
+<p>Regardless for <code>location</code> option, the contents of the created sub-directories are the same:</p>
+<pre><code>    analysis/
+    |
+    ├── paper/
+    │   ├── paper.Rmd       # this is the main document to edit
+    │   └── references.bib  # this contains the reference list information
+    
+    ├── figures/            # location of the figures produced by the Rmd
+    |
+    ├── data/
+    │   ├── DO-NOT-EDIT-ANY-FILES-IN-HERE-BY-HAND
+    │   ├── raw_data/       # data obtained from elsewhere
+    │   └── derived_data/   # data generated during the analysis
+    |
+    └── templates
+        ├── journal-of-archaeological-science.csl
+        |                   # this sets the style of citations &amp; reference list
+        ├── template.docx   # used to style the output of the paper.Rmd
+        └── template.Rmd</code></pre>
+<p>Let’s inspect</p>
+<div id="paper.rmd" class="section level4">
+<h4><code>paper.Rmd</code></h4>
+<p><code>paper.Rmd</code> is ready to write in and render with bookdown. It includes:</p>
+<ul>
+<li><p>a YAML header that identifies the <code>references.bib</code> file and the supplied <code>csl</code> file (Citation Style Language) to style the reference list)</p></li>
+<li><p>a <strong>colophon</strong> that <strong>adds some git commit details to the end of the document</strong>. This means that the output file (HTML/PDF/Word) is always traceable to a specific state of the code.</p></li>
+</ul>
+</div>
+<div id="references.bib" class="section level4">
+<h4><code>references.bib</code></h4>
+<p>The <code>references.bib</code> file has just one item to demonstrate the format. It is ready to insert more reference details.</p>
+<p>We can replace the supplied <code>csl</code> file with a different citation style from <a href="https://github.com/citation-style-language/" class="uri">https://github.com/citation-style-language/</a></p>
+<p><br></p>
+<hr />
+<p>Next, let’s set up functionality as a <a href="package.html">package</a>!</p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

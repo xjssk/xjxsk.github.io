@@ -1,0 +1,178 @@
+---
+title: Reproducible Research w/ rrtools 
+subtitle: ✨ harnessing the power of convention ✨
+author: "@ Northwest Universities R Day"
+date: "31st Oct 2018"
+output: html_document
+---
+
+# `r emo::ji("wave")` Hello and welcome
+
+### me: Dr Anna Krystalli
+
+- **Research Software Engineer**, _University of Sheffield_
+    + twitter **@annakrystalli**
+    + github **@annakrystalli**
+    + email **a.krystalli[at]sheffield.ac.uk**
+    
+- **Editor [rOpenSci](http://onboarding.ropensci.org/)**
+
+
+
+# Background
+
+- **Research is increasingly computational**
+
+- **Code and data are important research outputs**
+    + yet, we still focus mainly on curating papers.
+
+- **Calls for openness**
+    + stick: reproducibility crisis
+    + carrot: huge rewards from working open
+
+
+##### Yet we lack conventions and technical infrastructure for such openness.
+
+<br>
+
+## Enter the Research Compendium
+
+
+> The goal of a research compendium is to provide a **standard** and easily recognizable way for **organizing the digital materials** of a project to enable others to **inspect, reproduce, and extend the research**.
+
+
+### Three Generic Principles
+
+1. **Organize its files according to prevailing conventions**: 
+    + help other people recognize the structure of the project, 
+    + supports tool building which takes advantage of the shared structure.
+    
+1. **Separate of data, method, and output**, while making the relationship between them clear.
+
+1. **Specify the computational environment** that was used for the original analysis.
+
+
+<br>
+
+##  R community response
+
+> R packages can be used as a research compendium for organising and sharing files!
+
+
+1. _Wickham, H. (2017) [Research compendia. Note prepared for the 2017 rOpenSci Unconf_](https://docs.google.com/document/d/1LzZKS44y4OEJa4Azg5reGToNAZL0e0HSUwxamNY7E-Y/edit#heading=h.blggi16hdosp)
+
+
+2. Ben Marwick, Carl Boettiger & Lincoln Mullen (2018) [_Packaging Data Analytical Work Reproducibly Using R (and Friends)_](https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1375986?journalCode=utas20), The American Statistician, 72:1, 80-88, DOI: <10.1080/00031305.2017.1375986>
+
+
+<img src="assets/marw_f3.jpeg" width="300px">
+
+_Example use of the R package structure for a research compendium_ (source Marwick _et al_, 2018)
+
+<br>
+
+## Enter `rrtools`
+
+> The goal of rrtools is to provide **instructions, templates, and functions** for making a **basic compendium** suitable for writing **reproducible research with R**.
+
+
+**`rrtools` build on tools & conventions for R package development to**
+
+- organise files
+- manage dependencies
+- share code
+- document code
+- check and test code
+
+**`rrtools` extends and works with a number of R packages:**
+
+- [`devtools`](https://cran.r-project.org/package=devtools): functions for package development
+
+- [`usethis`](https://www.tidyverse.org/articles/2017/11/usethis-1.0.0/): automates repetitive tasks that arise during project setup and development
+
+- [`bookdown`](https://bookdown.org/): facilitates writing books and long-form articles/reports with R Markdown
+
+<br>
+
+***
+
+
+# Workshop approach
+    
+
+## Live coding
+
+The majority of the workshop I will be **live coding** `r emo::ji("fearful")` so that you can follow along. You will get a lot more out of the workshop if you do.
+
+However, handouts of the materials we'll cover are available if you get stuck!
+
+
+# Workshop materials
+
+## Data
+
+#### On github: <https://github.com/annakrystalli/rrtools-wkshp-materials/>  
+
++ click on **Clone or download** 
+
++ click on **Download ZIP** 
+
++ Unzip the file 
+
+## Handouts:
+
+#### <bit.ly/rrtools_handouts>
+
+---
+
+
+# Workshop aims and objectives
+
+In this workshop we'll **use materials associated with a published paper** (text, data and code) to **create a research compendium** around it.
+
+<br>
+
+By the end of the workshop, you should be able to:
+
+- Be able to **Create a Research Compendium** to manage and share resources associated with an academic publication.
+
+- Understand the basics of **managing code as an R package**.
+
+- Be able to **produce a reproducible manuscript from a single rmarkdown document**.
+
+- Appreciate the power of convention!
+
+<br>
+
+> It’s like agreeing that we will all drive on the left or the right. A hallmark of civilization is following conventions that constrain your behavior a little, in the name of public safety.
+
+**Jenny Bryan** on [Project-oriented workflows](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/)
+
+
+---
+
+### Level
+
+Intermediate
+
+### Prerequisites:
+
+Familiarity with Version Control through RStudio and rmarkdown.
+
+
+### System Requirements:
+
+Pandoc (>= 1.17.2)
+LaTeX
+
+If you don't have LaTeX installed, consider installing `TinyTeX`, a custom LaTeX distribution based on TeX Live that is small in size but functions well in most cases, especially for R users. 
+
+```{r, eval=FALSE}
+install.packages('tinytex')
+tinytex::install_tinytex()
+```
+
+Check [docs](https://yihui.name/tinytex/) before before installing.
+
+## Let's dive in!
+

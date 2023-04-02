@@ -1,0 +1,34 @@
+name: "rrtools-repro-research"
+output_dir: "../docs"
+include: [".nojekyll"]
+exclude: ["include"]
+navbar:
+  title: "Reproducible Research with rrtools"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Handouts"
+      icon: fa-gear
+      menu:
+        - text: "Workshop Sections"
+        - text: "Welcome & Background"
+          href: intro.html
+        - text: "Create a compendium"
+          href: create-compendium.html
+        - text: "Manage functionality as a package"
+          href: package.html
+        - text: "Create a reproducible paper"
+          href: paper.html
+  right:
+    - text: "Get Workshop Materials"
+      href: https://bit.ly/rrtools_wks
+    - text: "Final compendium"
+      href: https://github.com/annakrystalli/rrcompendium-complete
+    - icon: fa-github
+      href: https://github.com/annakrystalli/rrtools-repro-research
+output:
+  workflowr::wflow_html:
+    toc: true
+    toc_float: true
+    theme: cerulean
+    highlight: tango
